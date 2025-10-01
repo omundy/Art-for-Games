@@ -6,7 +6,7 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/JazmineCordon/JazmineCordon.unity
+    path: Assets/WalkingFigure/WalkingFigure.unity
     guid: 8c9cfa26abfee488c85f1582747f6a02
   m_configObjects:
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 1bf26cc7795f14fbd8e1c22cdeb860b4, type: 3}

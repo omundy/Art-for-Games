@@ -2,18 +2,25 @@ using System;
 using UnityEngine;
 using UnityEngine.InputSystem; // NEW INPUT SYSTEM
 
+/// Simple way to use new Input System
+// Reference https://onewheelstudio.com/blog/2023/7/4/easy-mode-unitys-new-input-system
+/// 2025 Owen Mundy
+
 public class InputManager : MonoBehaviour
 {
     public Vector2 mousePosition;
-
     public MouseButton mouseLeft;
     public MouseButton mouseRight;
+    // singleton
+    public static InputManager Instance { get; private set; }
 
-    public static InputManager Instance;
-
-    void Start()
+    void Awake()
     {
-        Instance = this;
+        // singleton
+        if (Instance != null && Instance != this)
+            Destroy(this);
+        else
+            Instance = this;
     }
 
     // Update is called once per frame
@@ -57,7 +64,7 @@ public class InputManager : MonoBehaviour
             mouseRight.up = true;
         }
 
-
+        // ...
     }
 }
 

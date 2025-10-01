@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 3846607793665139897}
   - component: {fileID: 1822756472441604708}
   m_Layer: 0
-  m_Name: Puzzle-Piece-Prefab
+  m_Name: Puzzle-Piece-Shadow-Prefab
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -105,7 +105,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::DropShadow
   spriteRenderer: {fileID: 0}
   shadowMaterial: {fileID: 2100000, guid: 2d5ef3ac24f9b41c5bf3ea12caa68b6d, type: 2}
-  offsetDown: {x: 0.05, y: -0.05}
+  offsetDown: {x: 0.01, y: -0.01}
   offsetUp: {x: 0.1, y: -0.1}
   scaleDown: 1.01
   scaleUp: 1.01

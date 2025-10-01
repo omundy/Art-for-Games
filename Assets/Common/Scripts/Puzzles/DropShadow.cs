@@ -14,7 +14,7 @@ public class DropShadow : MonoBehaviour
     [HideInInspector] public SpriteRenderer spriteRenderer;
     public Material shadowMaterial;
     Vector2 offset;
-    public Vector2 offsetDown = new Vector2(0.05f, -0.05f);
+    public Vector2 offsetDown = new Vector2(0.01f, -0.01f);
     public Vector2 offsetUp = new Vector2(0.1f, -0.1f);
     Vector2 scale;
     public float scaleDown = 1.01f;
@@ -36,12 +36,6 @@ public class DropShadow : MonoBehaviour
         spriteRenderer.sprite = parentSpriteRenderer.sprite;
         // set shadow material
         spriteRenderer.material = shadowMaterial;
-
-        // serialized now in inspector (keeping for reference)
-        //offsetDown = new Vector2(0.05f, -0.05f);
-        //offsetUp = new Vector2(0.1f, -0.1f);
-        //scaleDown = 1.01f;
-        //scaleUp = 1.02f;
 
         // call just once to display in default (down)
         DisplayUp(false);

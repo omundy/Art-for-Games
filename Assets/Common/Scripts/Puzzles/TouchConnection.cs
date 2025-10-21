@@ -27,6 +27,9 @@ public class TouchConnection : MonoBehaviour
     // should they touch?
     public List<bool> shouldTouch;
 
+    // should they be hidden on start?
+    public bool hideConnectionsOnStart;
+
     // status / display 
     public List<bool> areTouching;
     [HideInInspector] public bool requirementMet;
@@ -37,6 +40,12 @@ public class TouchConnection : MonoBehaviour
     {
         // begin in start, after puzzle selection
         StartCoroutine(UpdateTouchStatusLoop());
+
+        // hide other renderers
+        for (int i = 0; i < othercolliders.Count; i++)
+        {
+            othercolliders[i].GetComponent<SpriteRenderer>().enabled = !hideConnectionsOnStart;
+        }
     }
 
     IEnumerator UpdateTouchStatusLoop()

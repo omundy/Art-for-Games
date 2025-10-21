@@ -24,7 +24,7 @@ public class TouchConnectionManager : MonoBehaviour
     // begin in start, after puzzle selection
     private void Start()
     {
-        touchConnections = GetComponents<TouchConnection>();
+        touchConnections = GetComponentsInChildren<TouchConnection>();
         totalRequirements = touchConnections.Length;
         StartCoroutine(UpdateTouchStatusLoop());
     }

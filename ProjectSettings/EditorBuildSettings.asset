@@ -8,6 +8,15 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/WalkingFigure/WalkingFigure.unity
     guid: 8c9cfa26abfee488c85f1582747f6a02
+  - enabled: 1
+    path: Assets/Puzzle_Jigsaw/Puzzle_Shapes.unity
+    guid: 6c6131083d4a94c6285248d69c925304
+  - enabled: 1
+    path: Assets/Puzzle_Jigsaw/Puzzle_Jigsaw.unity
+    guid: 7feab407dbc7a4a04be8c3573ee5cf23
+  - enabled: 1
+    path: Assets/SceneManagement/SceneManagement.unity
+    guid: 0a9decbaef013464ea09626bbd56fbcd
   m_configObjects:
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 1bf26cc7795f14fbd8e1c22cdeb860b4, type: 3}
   m_UseUCBPForAssetBundles: 0

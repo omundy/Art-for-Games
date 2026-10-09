@@ -1,7 +1,10 @@
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class SceneControl : MonoBehaviour
+/// <summary>
+/// Control scene by touching this collider
+/// </summary>
+public class Portal : MonoBehaviour
 {
 
     public string goToScene;

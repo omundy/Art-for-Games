@@ -15,3 +15,9 @@ Examples for DIG 255 Art for Games
 - Using reusable prefabs with colliders ("portals") to move between scenes
 
 ![scenes](_screenshots/scenes.png)
+
+
+## Repeat Background
+
+
+![repeat](_screenshots/repeat-background.png)

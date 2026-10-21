@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 4945435534558384349}
   - component: {fileID: 2960859714644184089}
   m_Layer: 0
-  m_Name: SoundTrigger
+  m_Name: Trigger_Sound
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

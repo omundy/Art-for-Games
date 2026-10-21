@@ -1,7 +1,7 @@
 using TMPro;
 using UnityEngine;
 
-public class TextTrigger : MonoBehaviour
+public class Trigger_Text : MonoBehaviour
 {
     public TMP_Text textAsset;
     public string textToTrigger;

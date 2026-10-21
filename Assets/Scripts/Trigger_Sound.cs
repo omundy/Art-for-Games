@@ -1,7 +1,7 @@
 using UnityEngine;
 
 // Sounds from https://sfxr.me/
-public class SoundTrigger : MonoBehaviour
+public class Trigger_Sound : MonoBehaviour
 {
     public AudioSource audioSource;
     public AudioClip clip;

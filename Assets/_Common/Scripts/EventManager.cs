@@ -36,7 +36,7 @@ public class EventManager : MonoBehaviour
 			if (!eventManager)
 			{
 				// then find it
-				eventManager = FindFirstObjectByType(typeof(EventManager)) as EventManager;
+				eventManager = FindAnyObjectByType<EventManager>();
 				// if null
 				if (!eventManager)
 				{

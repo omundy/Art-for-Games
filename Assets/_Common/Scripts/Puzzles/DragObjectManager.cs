@@ -21,9 +21,6 @@ public class DragObjectManager : MonoBehaviour
     [Tooltip("The layers that can be interacted")]
     public LayerMask interactableLayer;
 
-    // adding this here, does it make allocation a problem still?
-    public RaycastHit2D[] hits;
-
 
     // listeners
     void OnEnable()

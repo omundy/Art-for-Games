@@ -17,7 +17,6 @@ public class SpriteSorter : MonoBehaviour
     SpriteRenderer spriteRenderer;
 
     [Header("Defaults")]
-    public SortingLayer sortingLayer;
     public int sortingLayerID;
     public string sortingLayerName;
     public int sortingOrder;
@@ -80,7 +79,7 @@ public class SpriteSorter : MonoBehaviour
         {
             // set name to same as parent
             sortingLayerName = spriteRenderer.sortingLayerName;
-            sortingLayerID = sortingLayer.id;
+            sortingLayerID = spriteRenderer.sortingLayerID;
         }
     }
     // SAVE ORDER

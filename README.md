@@ -4,14 +4,16 @@ Examples for DIG 255 Art for Games
 
 
 
+
+
+<details>
+<summary>Student Instructions</summary>
+
+
 ## Students: copy an example into your project
 
 Every example lives in its own folder in `Assets/Examples/`. The scripts and prefabs that several examples share live in `Assets/_Core/`. To use an example, you always export **two folders together**: the example's folder and `_Core`.
 
-
-
-<details>
-<summary>Instructions</summary>
 
 ### 1. Before you start
 
@@ -90,7 +92,12 @@ Assets/
 
 Reusable scripts and prefabs with parameters set in inspector and colliders to trigger animations, sounds, text, and "Portals" to move between scenes
 
-![scenes](_screenshots/scenes.png)
+![scenes](_screenshots/trigger-portals.png)
+![scenes](_screenshots/trigger-sound.png)
+![repeat](_screenshots/trigger-text.png)
+
+
+
 
 
 
@@ -98,11 +105,3 @@ Reusable scripts and prefabs with parameters set in inspector and colliders to t
 ## Repeat Background
 
 ![repeat](_screenshots/repeat-background.png)
-
-
-
-## UI Examples
-
-Trigger text from colliders
-
-![repeat](_screenshots/ui-text-trigger.png)

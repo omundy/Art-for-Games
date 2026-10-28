@@ -127,3 +127,7 @@ $RECYCLE.BIN/
 *.lnk
 
 # End of https://www.toptal.com/developers/gitignore/api/unity,macos,windows
+
+# Unity creates .meta files for OS junk
+Thumbs.db.meta
+.DS_Store.meta

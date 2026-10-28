@@ -7,6 +7,7 @@ TagManager:
   - NoteChecker
   - Obstacle
   - Ground
+  - Activator
   layers:
   - Default
   - TransparentFX
@@ -44,14 +45,15 @@ TagManager:
   - name: Default
     uniqueID: 0
     locked: 0
-  - name: Player
-    uniqueID: 307142245
-    locked: 0
   - name: Background
     uniqueID: 241860019
+    locked: 0
+  - name: Player
+    uniqueID: 307142245
     locked: 0
   - name: Objects
     uniqueID: 2640550645
     locked: 0
   m_RenderingLayers:
   - Default
+  m_MigratedRenderPipelines: []

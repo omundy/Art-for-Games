@@ -88,6 +88,26 @@ Assets/
 
 
 
+## Time_Progress
+
+A time-based slider that shows start/end game popup
+
+![repeat](_screenshots/time-progress.png)
+
+
+
+
+## Time_Daylight
+
+Lights show change in color over time
+
+![repeat](_screenshots/time-daylight.png)
+
+
+
+
+
+
 ## Triggers
 
 Reusable scripts and prefabs with parameters set in inspector and colliders to trigger animations, sounds, text, and "Portals" to move between scenes
@@ -102,6 +122,22 @@ Reusable scripts and prefabs with parameters set in inspector and colliders to t
 
 
 
+## Puzzle using colliders
+
+![repeat](_screenshots/puzzle.png)
+
+
+
+
 ## Repeat Background
 
 ![repeat](_screenshots/repeat-background.png)
+
+
+
+## GameManager, Services, SoundManager, DialogueManager, SceneChanger
+
+These examples can be found in this project 
+https://github.com/omundy/ParaIsabel
+
+

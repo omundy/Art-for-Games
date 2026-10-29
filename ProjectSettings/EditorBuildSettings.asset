@@ -17,5 +17,8 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Examples/Trigger_Portals/Trigger_Portals.unity
     guid: 0a9decbaef013464ea09626bbd56fbcd
+  - enabled: 1
+    path: Assets/Examples/Time_Progress/Time_Progress.unity
+    guid: b6014a134f1b142b69a4fa761309089d
   m_configObjects:
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 1bf26cc7795f14fbd8e1c22cdeb860b4, type: 3}

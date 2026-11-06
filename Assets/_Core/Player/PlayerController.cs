@@ -1,5 +1,7 @@
 using System;
+using TMPro;
 using UnityEngine;
+using UnityEngine.EventSystems;
 using UnityEngine.InputSystem; // NEW INPUT SYSTEM
 
 /// Basic 2D platformer character controller
@@ -75,7 +77,10 @@ public class PlayerController : MonoBehaviour
         if (!groundCheck)
         {
             Debug.LogError("GroundCheck required");
+#if UNITY_EDITOR
+            // the UnityEditor code doesn't exist in a built game, so only use it in the Editor
             UnityEditor.EditorApplication.isPlaying = false;
+#endif
         }
     }
 
@@ -88,25 +93,42 @@ public class PlayerController : MonoBehaviour
 
     private void Update()
     {
+        // ignore movement keys while the player is typing in a text field
+        // (still run the code below, so the player stops and animates normally)
+        bool typing = IsTyping();
+
         // get horizontal input (between -1 and 1) from player
         // playerInput.x = Input.GetAxisRaw("Horizontal"); // Legacy Input
-        playerInput = moveAction.ReadValue<Vector2>(); // NEW INPUT SYSTEM
+        playerInput = typing ? Vector2.zero : moveAction.ReadValue<Vector2>(); // NEW INPUT SYSTEM
         Move(playerInput.x * runSpeed * Time.fixedDeltaTime);
 
         // check if jump keys / buttons are pressed on this loop
         // jumpPress = Input.GetButtonDown("Jump") || Input.GetKeyDown(KeyCode.UpArrow);
-        jumpPress = jumpAction.WasPressedThisFrame(); // NEW INPUT SYSTEM
+        jumpPress = !typing && jumpAction.WasPressedThisFrame(); // NEW INPUT SYSTEM
         if (jumpPress) Debug.Log("Jump");
         // jumpPress = jumpAction.IsPressed();
         Jump();
 
         // check if jump keys / buttons are held down
         // jumpHold = Input.GetKey(KeyCode.Space) || Input.GetKey(KeyCode.UpArrow);
-        jumpHold = Keyboard.current.spaceKey.isPressed || Keyboard.current.upArrowKey.isPressed; // NEW INPUT SYSTEM
+        jumpHold = !typing && (Keyboard.current.spaceKey.isPressed || Keyboard.current.upArrowKey.isPressed); // NEW INPUT SYSTEM
         BetterJump();
 
         // whether currently on ground (collision detection)
         CheckIfGrounded();
+    }
+
+    // is the player currently typing in a TextMeshPro input field?
+    bool IsTyping()
+    {
+        // a scene without an EventSystem can't have a selected field
+        if (EventSystem.current == null) return false;
+
+        GameObject selected = EventSystem.current.currentSelectedGameObject;
+        if (selected == null) return false;
+
+        TMP_InputField field = selected.GetComponent<TMP_InputField>();
+        return field != null && field.isFocused;
     }
 
     public void Move(float move)

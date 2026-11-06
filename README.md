@@ -119,6 +119,13 @@ Reusable scripts and prefabs with parameters set in inspector and colliders to t
 
 
 
+## Crossword scene
+
+Which can be opened (as additive scene) from Trigger_Portals
+
+![repeat](_screenshots/crossword.png)
+
+
 
 
 

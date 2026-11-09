@@ -131,7 +131,7 @@ GameObject:
   - component: {fileID: 126033867}
   - component: {fileID: 126033866}
   m_Layer: 5
-  m_Name: Slider
+  m_Name: Time_Progress_Slider
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

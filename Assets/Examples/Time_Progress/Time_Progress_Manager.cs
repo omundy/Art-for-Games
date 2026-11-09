@@ -45,18 +45,27 @@ public class Time_Progress_Manager : MonoBehaviour
     /// </summary>
     void ShowPopup(string message, string label, UnityAction onClick)
     {
-        messageText.text = message;
-        buttonText.text = label;
-        // remove the previous action so the button only does one thing
-        button.onClick.RemoveAllListeners();
-        button.onClick.AddListener(onClick);
-        popup.SetActive(true);
+        if (messageText != null && buttonText != null)
+        {
+            messageText.text = message;
+            buttonText.text = label;
+        }
+        if (button != null)
+        {
+            // remove the previous action so the button only does one thing
+            button.onClick.RemoveAllListeners();
+            button.onClick.AddListener(onClick);
+        }
+        if (popup != null)
+            popup.SetActive(true);
         Freeze(true);
     }
 
     void StartGame()
     {
-        popup.SetActive(false);
+        // popup behavior is optional
+        if (popup != null)
+            popup.SetActive(false);
         Freeze(false);
         timer.StartTimer();
     }

@@ -897,6 +897,14 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 903829208289263157, guid: 8c56a7cff778043d7ba97e85f65751db, type: 3}
+      propertyPath: key
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 903829208289263157, guid: 8c56a7cff778043d7ba97e85f65751db, type: 3}
+      propertyPath: useKey
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 903829208289263157, guid: 8c56a7cff778043d7ba97e85f65751db, type: 3}
       propertyPath: goToScene
       value: Puzzle_Jigsaw
       objectReference: {fileID: 0}
@@ -1153,7 +1161,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Trigger_AdditiveScene
   sceneToLoad: Crossword
   key: 1
-  hideInsteadOfRemove: 1
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0

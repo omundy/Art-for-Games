@@ -121,7 +121,7 @@ Reusable scripts and prefabs with parameters set in inspector and colliders to t
 
 ## Crossword scene
 
-Which can be opened (as additive scene) from Trigger_Portals
+Which can be opened (as additive scene) from Trigger_Portals. See the [Crossword README](Assets/Examples/Crossword/README.md) for all the instructions.
 
 ![repeat](_screenshots/crossword.png)
 

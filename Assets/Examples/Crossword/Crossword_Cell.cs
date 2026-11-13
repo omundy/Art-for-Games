@@ -15,6 +15,10 @@ public class Crossword_Cell : MonoBehaviour
     // the letter color when the cell isn't marked as wrong
     Color normalColor;
 
+    // the number of the word that starts here (0 if none), used by the clues even when it isn't drawn
+    [HideInInspector]
+    public int number = 0;
+
     // the small number in the corner (only some cells have one)
     TextMeshProUGUI numberText;
 
@@ -31,7 +35,7 @@ public class Crossword_Cell : MonoBehaviour
         {
             // turn off the input so it can't be clicked. (setting interactable to false
             // would also apply the input's "disabled" color, making the black see-through)
-            GetComponent<Image>().color = Color.black;
+            GetComponent<Image>().color = crossword.style.blackSquareColor;
             input.enabled = false;
             return;
         }
@@ -66,6 +70,21 @@ public class Crossword_Cell : MonoBehaviour
         numberText.color = input.textComponent.color;
         // let clicks pass through to the input
         numberText.raycastTarget = false;
+    }
+
+    // set the square, letter and number colors. Black squares use blackColor instead of cellColor
+    public void SetColors(Color cellColor, Color blackColor, Color letterColor, Color numberColor)
+    {
+        GetComponent<Image>().color = answer == "" ? blackColor : cellColor;
+
+        // SetWrong() switches back to this color
+        normalColor = letterColor;
+        input.textComponent.color = letterColor;
+
+        if (numberText != null)
+        {
+            numberText.color = numberColor;
+        }
     }
 
     // use one number for the width and height, so the cell is always square

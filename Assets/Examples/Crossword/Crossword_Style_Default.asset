@@ -12,3 +12,29 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 66462703d7dc4ad0b56285bee9c14a66, type: 3}
   m_Name: Crossword_Style_Default
   m_EditorClassIdentifier: Assembly-CSharp::Crossword_Style
+  cellSpacing: 3
+  showNumbers: 1
+  backgroundColor: {r: 1, g: 1, b: 1, a: 0.392}
+  gridLineColor: {r: 0.5, g: 0.5, b: 0.5, a: 1}
+  rowColor: {r: 1, g: 1, b: 1, a: 0.392}
+  cellColor: {r: 1, g: 1, b: 1, a: 1}
+  blackSquareColor: {r: 0, g: 0, b: 0, a: 1}
+  letterColor: {r: 0.196, g: 0.196, b: 0.196, a: 1}
+  numberColor: {r: 0.196, g: 0.196, b: 0.196, a: 1}
+  wrongColor: {r: 1, g: 0, b: 0, a: 1}
+  showClues: 1
+  clueWidth: 0.2
+  clueGap: 20
+  matchGridHeight: 1
+  cluePadding: 12
+  clueFontSizeMin: 20
+  clueFontSizeMax: 70
+  clueSpacing: 8
+  clueBackgroundColor: {r: 1, g: 1, b: 1, a: 0.392}
+  clueHeadingColor: {r: 0.196, g: 0.196, b: 0.196, a: 1}
+  clueNumberColor: {r: 0.196, g: 0.196, b: 0.196, a: 1}
+  clueTextColor: {r: 0.196, g: 0.196, b: 0.196, a: 1}
+  highlightColor: {r: 0.1, g: 0.4, b: 0.9, a: 1}
+  highlightBackgroundColor: {r: 1, g: 0.85, b: 0.3, a: 0}
+  solvedAlpha: 0.35
+  hiddenColor: {r: 0.196, g: 0.196, b: 0.196, a: 1}

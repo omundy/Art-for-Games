@@ -129,9 +129,9 @@ Which can be opened (as additive scene) from Trigger_Portals. See the [Crossword
 
 
 
-## Enemy_Wander
+## Enemy_Wander (with Collectables)
 
-![enemy](_screenshots/enemy.png)
+![enemy](_screenshots/enemy-collectables.png)
 
 Enemies that wander left and right, pausing and turning around now and then. Set each enemy's Mode on its `Enemy_Wander` component:
 
@@ -139,7 +139,6 @@ Enemies that wander left and right, pausing and turning around now and then. Set
 - **Jump Between Platforms** (purple): at an edge, works out where a jump would land and only jumps if it's onto another platform, otherwise it turns around. It also jumps up onto higher platforms now and then.
 
 Platforms, ground and walls need to be on the **Ground** layer. Select an enemy to see its edge check (yellow) and jump arc (cyan) in the Scene view.
-
 
 
 

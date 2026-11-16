@@ -90,6 +90,9 @@ public class Crossword : MonoBehaviour
     // only trigger the event once
     bool complete = false;
 
+    // how many items had been collected when the clues were last built, see Update()
+    int collectedCount = -1;
+
     // used to fit the cells in the available space
     int rowCount = 0;
     int columnCount = 0;
@@ -275,6 +278,14 @@ public class Crossword : MonoBehaviour
         if (word != highlightedWord)
         {
             highlightedWord = word;
+            RefreshClues();
+        }
+
+        // rebuild the clues when an item is collected, in case it reveals hidden clue words
+        int count = Collected_Items.list != null ? Collected_Items.list.Count : 0;
+        if (count != collectedCount)
+        {
+            collectedCount = count;
             RefreshClues();
         }
     }
@@ -854,7 +865,7 @@ public class Crossword : MonoBehaviour
         {
             string key = match.Groups[1].Value.Trim().ToUpper();
             string hiddenWords = match.Groups[2].Value;
-            if (revealedKeys.Contains(key) || solved.Contains(key)) return hiddenWords;
+            if (revealedKeys.Contains(key) || solved.Contains(key) || IsItemCollected(key)) return hiddenWords;
 
             // swap the letters for x's (so they can't be read) the same color as the bar on top
             string covered = Regex.Replace(hiddenWords, @"\S", "x");
@@ -996,8 +1007,16 @@ public class Crossword : MonoBehaviour
     public bool IsClueWordRevealed(string key)
     {
         key = key.Trim().ToUpper();
-        if (revealedKeys.Contains(key)) return true;
+        if (revealedKeys.Contains(key) || IsItemCollected(key)) return true;
         return words.Exists(word => GetAnswer(word) == key && IsCorrect(word));
+    }
+
+    // has the player collected an item with this name? (see Collectable.cs, capitals don't matter)
+    // so an item with itemName "PIXEL" shows the words hidden with {PIXEL:words}
+    bool IsItemCollected(string key)
+    {
+        return Collected_Items.list != null &&
+            Collected_Items.list.Exists(item => item != null && string.Equals(item.Trim(), key, System.StringComparison.OrdinalIgnoreCase));
     }
 
     // right-click the script's header in the Inspector (in Play mode) to run this, or use the button

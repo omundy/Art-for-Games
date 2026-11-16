@@ -12,3 +12,41 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 258b4b1484554e93b06da8b88b538453, type: 3}
   m_Name: Crossword_Puzzle_Default
   m_EditorClassIdentifier: Assembly-CSharp::Crossword_Puzzle
+  grid: '_ _ _ P _ M A S K
+
+    S P R I T E _ _ _
+
+    H _ _ X _ S _ _ _
+
+    A _ _ E _ H U E _
+
+    D _ _ L _ _ _ F _
+
+    E _ _ _ _ A _ F _
+
+    R E N D E R _ E _
+
+    _ _ _ O _ T _ C _
+
+    F O N T _ _ _ T _'
+  clues: 'MASK: Hides part of an image
+
+    SPRITE: A 2D image used in a game
+
+    HUE: Red, green or blue, for example
+
+    RENDER: Draw the final image of a scene
+
+    FONT: A typeface for UI text
+
+    PIXEL: The smallest dot on a screen
+
+    MESH: The vertices, edges and faces of a 3D model
+
+    SHADER: Code that tells the {SHADER:GPU} how to color a surface
+
+    EFFECT: A particle {EFFECT:explosion} is a visual ___
+
+    ART: Games are full of it
+
+    DOT: A tiny round mark'
